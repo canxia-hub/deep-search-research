@@ -31,7 +31,14 @@ This repository contains the stabilized version that was validated on 2026-03-30
 ## OpenSearch note
 On Tencent Cloud CVM / Windows Server environments without nested virtualization, Docker Linux / WSL2 is not a stable route. This version includes a Windows-native OpenSearch path and documents the required adjustments.
 
+## Project metadata
+- License: `MIT` (`LICENSE`)
+- Security policy: `SECURITY.md`
+- Release notes: `CHANGELOG.md`
+- Public release audit: `docs/PUBLIC-RELEASE-AUDIT.md`
+
 See:
 - `docs/FINAL-CHECKLIST.md`
 - `docs/DEPLOYMENT-NOTES.md`
+- `docs/PUBLIC-RELEASE-AUDIT.md`
 - `references/local-opensearch-setup.md`
