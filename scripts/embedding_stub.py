@@ -131,8 +131,6 @@ def _stub_embedding(text: str, dims: int) -> list[float]:
 
 
 def _request_openai_embeddings(texts: list[str], config: EmbeddingConfig, dims: int | None) -> list[list[float]]:
-    if not config.base_url:
-        raise RuntimeError("Embedding base URL is not configured")
     if not config.api_key:
         raise RuntimeError("Embedding API key is not configured")
     if not config.model:
@@ -174,6 +172,9 @@ def _request_openai_embeddings(texts: list[str], config: EmbeddingConfig, dims: 
             embedding = embeddings[0].get("embedding") or []
             vectors.append([float(value) for value in embedding])
         return vectors
+
+    if not config.base_url:
+        raise RuntimeError("Embedding base URL is not configured")
 
     payload: dict[str, Any] = {
         "model": config.model,
