@@ -10,7 +10,7 @@ from typing import Any
 
 from embedding_stub import cosine_similarity, embed_texts, has_real_embedding_provider
 
-OPENCLAW_CONFIG_PATH = Path(os.getenv("OPENCLAW_CONFIG_PATH") or r"C:\Users\Administrator\.openclaw\openclaw.json")
+OPENCLAW_CONFIG_PATH = Path(os.getenv("OPENCLAW_CONFIG_PATH") or str(Path.home() / ".openclaw" / "openclaw.json"))
 
 
 @dataclass

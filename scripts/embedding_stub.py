@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 DEFAULT_STUB_DIMS = 64
-OPENCLAW_CONFIG_PATH = Path(os.getenv("OPENCLAW_CONFIG_PATH") or r"C:\Users\Administrator\.openclaw\openclaw.json")
+OPENCLAW_CONFIG_PATH = Path(os.getenv("OPENCLAW_CONFIG_PATH") or str(Path.home() / ".openclaw" / "openclaw.json"))
 
 
 @dataclass
