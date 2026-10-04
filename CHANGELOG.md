@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.0 - 2026-10-04
+
+### Added
+- Shared quick-web-search v2 research entry with sibling/SEARCH_V2_HOME resolution.
+- Agent-led query decomposition, original-page reading, evidence-gap follow-up and cited synthesis.
+- Budget/cancel/status contracts and same-question checkpoint resume through the shared core.
+
+### Changed
+- Default entry is scripts/research.py; no new model/index service is required.
+- Reports are evidence packages, not automatically synthesized final conclusions.
+- Legacy MVP/OpenSearch/embedding/rerank scripts are retained but are not the v2 default.
+- Portable installation and cross-repository dependency documentation.
+
 ## 0.2.0 - 2026-04-20
 
 ### Added
